@@ -14,3 +14,8 @@ node deletion supporting all three cases (leaf, one child, two children).
 javac *.java
 
 java BSTreeRunner
+
+## Known Limitations / Future Improvements
+Does not use inherent property of BST's, as such the search os O(n) - would use BST property in search and getLargest to make them O(log n) instead of O(n).
+Uses simple non realigning BST, as such worst case scenario even with improved search is O(n).
+
