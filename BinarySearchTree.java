@@ -218,21 +218,10 @@ public class BinarySearchTree
     private int getHeight(TreeNode tree)
     {
 
-        int left=0;
-        int right=0;
-        root=tree;
-        while (tree != null)
-        {
-            tree = tree.getLeft();
-            left++;
-        }
-        tree=root;
-        while (tree != null)
-        {
-            tree = tree.getRight();
-            right++;
-        }
-        return Math.max(left,right)-1;
+        private int getHeight(TreeNode tree) {
+        if (tree == null) return -1;
+        return 1 + Math.max(getHeight(tree.getLeft()), getHeight(tree.getRight()));
+}
     }
 
     public void getNumNodes()
